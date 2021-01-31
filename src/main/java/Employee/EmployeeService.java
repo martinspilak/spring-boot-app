@@ -1,5 +1,5 @@
-package com.appslab.springbootapp;
-import com.appslab.springbootapp.model.*;
+package Employee;
+import Employee.model.*;
 import java.util.List;
 
 public interface EmployeeService {

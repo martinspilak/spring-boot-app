@@ -1,4 +1,4 @@
-package com.appslab.springbootapp;
+package Employee;
 
 
 public class SecondClass {

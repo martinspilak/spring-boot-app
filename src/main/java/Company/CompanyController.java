@@ -1,4 +1,4 @@
-package com.appslab.springbootapp;
+package Company;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

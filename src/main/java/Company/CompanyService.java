@@ -1,4 +1,4 @@
-package com.appslab.springbootapp;
+package Company;
 
 public interface CompanyService {
     void saveCompany(Company company);

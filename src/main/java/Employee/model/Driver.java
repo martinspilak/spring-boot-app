@@ -1,4 +1,4 @@
-package com.appslab.springbootapp.model;
+package Employee.model;
 
 public class Driver extends  JobType{
     public Driver(float salary, int bonus){

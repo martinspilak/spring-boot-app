@@ -1,4 +1,4 @@
-package com.appslab.springbootapp;
+package Company;
 
 public class CompanyServiceImpl implements CompanyService{
     CompanyRepository companyRepository;

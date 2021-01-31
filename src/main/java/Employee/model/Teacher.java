@@ -1,4 +1,4 @@
-package com.appslab.springbootapp.model;
+package Employee.model;
 
 public class Teacher extends  JobType{
     public Teacher(float salary, int bonus){

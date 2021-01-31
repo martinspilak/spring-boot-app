@@ -1,5 +1,5 @@
 package com.appslab.springbootapp;
-import com.appslab.springbootapp.model.*;
+import Employee.model.*;
 import org.springframework.stereotype.Component;
 import java.util.*;
 
