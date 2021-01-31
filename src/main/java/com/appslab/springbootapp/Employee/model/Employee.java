@@ -1,4 +1,4 @@
-package Employee.model;
+package com.appslab.springbootapp.Employee.model;
 
 public enum Employee {
     PROGRAMMER("Programmer"),

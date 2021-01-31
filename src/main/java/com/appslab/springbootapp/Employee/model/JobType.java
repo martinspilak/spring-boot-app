@@ -1,4 +1,4 @@
-package Employee.model;
+package com.appslab.springbootapp.Employee.model;
 
 public class JobType   {
     public float salary;

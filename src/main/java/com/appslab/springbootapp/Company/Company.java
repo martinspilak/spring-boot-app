@@ -1,4 +1,4 @@
-package Company;
+package com.appslab.springbootapp.Company;
 import javax.persistence.*;
 
 @Entity

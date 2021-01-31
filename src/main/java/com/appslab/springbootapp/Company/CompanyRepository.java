@@ -1,4 +1,4 @@
-package Company;
+package com.appslab.springbootapp.Company;
 
 import org.springframework.data.repository.CrudRepository;
 

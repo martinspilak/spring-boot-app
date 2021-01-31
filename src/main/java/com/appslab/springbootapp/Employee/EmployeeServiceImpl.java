@@ -1,5 +1,5 @@
-package Employee;
-import Employee.model.*;
+package com.appslab.springbootapp.Employee;
+import com.appslab.springbootapp.Employee.model.*;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
