@@ -1,4 +1,6 @@
 package com.appslab.springbootapp.Address;
+import com.appslab.springbootapp.Company.Company;
+
 import javax.persistence.*;
 
 
@@ -22,6 +24,8 @@ public class Address {
         this.city = city;
         this.state = state;
     }
+    @OneToOne(mappedBy = "address")
+    private Company company;
 
     public Long getId() {
         return id;

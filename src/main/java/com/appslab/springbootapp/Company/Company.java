@@ -1,4 +1,6 @@
 package com.appslab.springbootapp.Company;
+import com.appslab.springbootapp.Address.Address;
+
 import javax.persistence.*;
 
 @Entity
@@ -15,6 +17,9 @@ public class Company{
        this.id = id;
        this.name = name;
    }
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id", referencedColumnName = "id")
+    private Address address;
 
     public Long getId() {
 
