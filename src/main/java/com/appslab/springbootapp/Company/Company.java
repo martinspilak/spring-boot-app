@@ -1,5 +1,6 @@
 package com.appslab.springbootapp.Company;
 import com.appslab.springbootapp.Address.Address;
+import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 
@@ -16,7 +17,9 @@ public class Company{
     public Company(Long id, String name){
        this.id = id;
        this.name = name;
+       
    }
+    @NotNull
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id", referencedColumnName = "id")
     private Address address;
@@ -39,4 +42,12 @@ public class Company{
 
        this.name = name;
    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 }
