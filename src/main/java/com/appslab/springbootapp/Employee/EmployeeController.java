@@ -1,16 +1,14 @@
 package com.appslab.springbootapp.Employee;
 import com.appslab.springbootapp.Employee.model.*;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 @RestController
 public class EmployeeController {
-    EmployeeService employeService;
+    EmployeeService employeeService;
     List<JobType> list = Arrays.asList(new Programmer(1700.0f, 200),new Teacher(900.0f, 300),new Driver(1000.0f, 300));
-    public EmployeeController(EmployeeService employeService){
-        this.employeService = employeService;
+    public EmployeeController(EmployeeService employeeService){
+        this.employeeService = employeeService;
     }
     @GetMapping(value = "/hello")
     public String hello(){
@@ -18,11 +16,11 @@ public class EmployeeController {
     }
     @GetMapping(value = "/salary")
     public double totalSalary(){
-        return employeService.salarySum(list);
+        return employeeService.salarySum(list);
     }
     @GetMapping(value = "/bonus")
     public int totalBonus(){
-        return employeService.bonusSum(list);
+        return employeeService.bonusSum(list);
     }
     @GetMapping(value = "/snail")
     public double snail(@RequestParam double stepHeight, @RequestParam double stepLength, @RequestParam double towerHeight){

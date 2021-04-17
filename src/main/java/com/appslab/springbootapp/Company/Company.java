@@ -1,8 +1,9 @@
 package com.appslab.springbootapp.Company;
 import com.appslab.springbootapp.Address.Address;
+import com.appslab.springbootapp.Employee.Employee;
 import com.sun.istack.NotNull;
-
 import javax.persistence.*;
+import java.util.*;
 
 @Entity
 public class Company{
@@ -10,6 +11,8 @@ public class Company{
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
    private String name;
+    @OneToMany(mappedBy="company")
+    private List<Employee> employee;
 
     public Company() {
     }
@@ -17,7 +20,7 @@ public class Company{
     public Company(Long id, String name){
        this.id = id;
        this.name = name;
-       
+
    }
     @NotNull
     @OneToOne(cascade = CascadeType.ALL)
@@ -49,5 +52,13 @@ public class Company{
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public List<Employee> getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(List<Employee> employee) {
+        this.employee = employee;
     }
 }
